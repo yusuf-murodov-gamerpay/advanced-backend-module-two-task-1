@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_package = "com.advancedbackend.module_two.stubs.chat";
+option java_multiple_files = true;
+
+service ChatService {
+  rpc chat(stream ChatPayload) returns (stream ChatPayload);
+}
+
+message ChatPayload {
+  string message = 1;
+}

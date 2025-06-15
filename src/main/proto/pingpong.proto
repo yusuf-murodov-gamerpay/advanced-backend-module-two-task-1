@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "com.advancedbackend.module_two.stubs.pingpong";
+option java_multiple_files = true;
+
+service PingPongService {
+  rpc getPong(PingPongRequest) returns (PingPongResponse);
+}
+
+message PingPongRequest {
+  string message = 1;
+}
+
+message PingPongResponse {
+  string message = 1;
+}
